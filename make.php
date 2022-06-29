@@ -31,6 +31,16 @@
 				
 				<div>
 				<span id="span">Name:</span>
+                <div>
+				<?php  if (isset($_SESSION['user'])) : ?>
+					<strong><?php echo $_SESSION['user']['fullname']; ?></strong>
+
+					<small>
+						<i  style="color: #888;">(<?php echo ucfirst($_SESSION['user']['email']); ?>)</i> 
+						<br>
+					</small>
+
+					</div>
 
 				<form class="form" action="dataUserComplaint.php" method="POST" style="width:100%;">
 					<span id="span2">Detail:</span>
@@ -52,4 +62,3 @@
   
 </head>
 <body>
-</html>
