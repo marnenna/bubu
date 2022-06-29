@@ -28,12 +28,20 @@
 
     <div class="" id="makecomplaint" method="post">
 				<h4>Make a Complaint<hr /></h4>
+
+                <?php echo ("Name:");?>
 				
-				<div>
-				<span id="span">Name:</span>
-                <div>
 				<?php  if (isset($_SESSION['user'])) : ?>
-					<strong><?php echo $_SESSION['user']['fullname']; ?></strong>
+					<strong><?php 
+                        
+                        
+                        echo $_SESSION['user']; ?></strong>
+
+                    <strong><?php 
+                        
+                        
+                        echo $_SESSION['fullname']; ?></strong>
+
 
 					<small>
 						<i  style="color: #888;">(<?php echo ucfirst($_SESSION['user']['email']); ?>)</i> 
@@ -41,6 +49,7 @@
 					</small>
 
 					</div>
+                    <?php endif ?>
 
 				<form class="form" action="dataUserComplaint.php" method="POST" style="width:100%;">
 					<span id="span2">Detail:</span>
